@@ -60,6 +60,8 @@ app.all('*', (req, res, next) => {
     res.redirect('/tasks')
 })
 
-app.listen(3000, () => {
-    console.log('SERVING TO PORT 3000!')
+const port=process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log(`SERVING TO PORT ${port}!`)
 })
