@@ -1,0 +1,9 @@
+<% layout('layouts/boilerplate')%>
+<h1>All Tasks</h1>
+
+<ul>
+    <% for(let task of tasks){%>
+        <li><a href="tasks/<%=task._id%>"><%=task.title%></a></li>
+        <p>Due till:<%=task.finishDate%></p>
+        <%}%>
+</ul>

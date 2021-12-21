@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate')%>
+    <h1>Edit Task</h1>
+
+
+    <form action="/tasks/<%=task._id%>?_method=PUT" method="POST">
+        <div>
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" type="text" name="task[title]" id="title" value="<%=task.title%>">
+        </div>
+        <div>
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-control" type="text" name="task[description]" id="description"><%=task.description%></textarea>
+        </div>
+        <div>
+            <label class="form-label" for="finishDate">Due Till</label>
+            <input class="form-control" type="text" name="task[finishDate]" id="finishDate" value="<%=task.finishDate%>">
+        </div>
+        <button class="btn btn-primary">Update Task</button>
+    </form>

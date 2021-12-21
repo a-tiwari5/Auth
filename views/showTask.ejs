@@ -1,0 +1,11 @@
+<% layout('layouts/boilerplate')%>
+
+<h1>Title:<%=task.title%></h1>
+<p>Description:<%=task.description%></p>
+<p>Due Till:<%=task.finishDate%></p>
+<a class="btn btn-primary" href="/tasks/<%=task._id%>/edit">Edit Task</a>
+<p>
+    <form action="/tasks/<%=task._id%>?_method=DELETE" method="POST">
+        <button class="btn btn-danger">DELETE</button>
+    </form>
+</p>

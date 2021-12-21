@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate')%>
+<h1>Create A New Task</h1>
+<form action="/tasks" method="POST">
+    <div>
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" name="task[title]" id="title">
+    </div>
+    <div>
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-control" type="text" name="task[description]" id="description"></textarea>
+    </div>
+    <div>
+        <label class="form-label" for="finishDate">Due Till</label>
+        <input class="form-control" type="text" name="task[finishDate]" id="finishDate">
+    </div>
+    <button class="btn btn-primary">Add Task</button>
+</form>
